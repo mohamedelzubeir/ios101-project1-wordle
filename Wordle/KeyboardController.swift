@@ -29,8 +29,10 @@ class KeyboardController: NSObject,
                       numberOfItemsInSection section: Int) -> Int {
     // Exercise 1: Return the correct number of items in a section
     // Tip: There's a helper method you can use located in this class
+    
     // START YOUR CODE HERE
-    return 0
+    //return 10 (previous attempt), correct but not sustainable if keyboard changes
+    return numItems(in: section) // Still don't fully understand
     // END YOUR CODE HERE
   }
 
@@ -40,8 +42,10 @@ class KeyboardController: NSObject,
                                                   for: indexPath) as! KeyboardCell
     cell.configure(with: keyboardRows[indexPath.section][indexPath.row])
     // Exercise 4: Pass in the `didSelectString` closure to the KeyboardCell's corresponding property
+    
     // START YOUR CODE HERE
-    // ...
+    cell.configure(with: keyboardRows[indexPath.section][indexPath.row])
+    cell.didSelectString = didSelectString // Passing the closure to the cell
     // END YOUR CODE HERE
     return cell
   }
