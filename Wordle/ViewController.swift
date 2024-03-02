@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     // START YOUR CODE HERE
       keyboardController = KeyboardController(collectionView: keyboardCollectionView)
         keyboardController.didSelectString = { [weak self] selectedString in
-          if selectedString == "DELETE_KEY" {
+          if selectedString == DELETE_KEY {
             self?.boardController.deleteLastCharacter()
           } else {
               self?.boardController.enter(selectedString) //'(string: selectedString)' kept giving errors

@@ -41,7 +41,9 @@ class KeyboardCell: UICollectionViewCell {
   @objc private func didTapString() {
     // START YOUR CODE HERE
     // if let string = self.string {
-      didSelectString?(string) // Call the `didSelectString` closure with the string
+
+          didSelectString?(string) // Call the `didSelectString` closure with the string
+      
     //}
     // END YOUR CODE HERE
   }
